@@ -13,3 +13,4 @@ Every idea is a note, and every note is a node! Pin virtual notes to the virtual
 **(Be careful, you can permanently resize a note into oblivion while still displaying its text! I know, it's weird. Working on it!)**
 - Press Ctrl+S to save the project to the default file or Ctrl+ShiftS to create (or rewrite) a custom file. The location for savefiles is %localappdata%\CorkBoard\. Press Ctrl+O to load a savefile.
 **Remember to save your progress before you quit, the tool doesn't do that itself yet!**
+- Press Ctrl+N to start a new mindmap. **Don't save the new mindmap with Ctrl+S as that WILL rewrite the old minndmap!**
