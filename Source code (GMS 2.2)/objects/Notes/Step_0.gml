@@ -4,7 +4,7 @@ if (keyboard_check(vk_control)) {
 	if (keyboard_check_pressed(ord("S"))) {
 		if (keyboard_check(vk_shift))
 			filename = get_string("Enter the name of the file to save:", "project.mindmap");
-		save_notes(filename);
+		save_notes(/*filename*/);
 	}
 	
 	if (keyboard_check_pressed(ord("O"))) {
@@ -18,7 +18,7 @@ if (keyboard_check(vk_control)) {
 } else {
 	if (keyboard_check_pressed(vk_f5)) {
 		filename = get_string("Enter the name of the file to save:", "project.mindmap");
-		save_notes(filename);
+		save_notes(/*filename*/);
 	}
 	
 	if (keyboard_check_pressed(vk_f9)) {

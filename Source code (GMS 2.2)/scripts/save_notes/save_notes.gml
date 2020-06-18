@@ -1,5 +1,5 @@
 with (Notes) {
-	var savefile = argument[0];
+	savefile = filename;
 	
 	if (!ds_list_empty(notes)) {
 		var ntemp = ds_list_create();
@@ -7,6 +7,8 @@ with (Notes) {
 		
 		if (file_exists(savefile)) {
 			file_delete(savefile);
+		}
+			
 			ini_open(savefile);
 		
 			ini_write_real("notes_list_size", "size", ds_list_size(ntemp));
@@ -41,7 +43,6 @@ with (Notes) {
 				output = json_encode(dsi);
 			
 				ini_write_string("notes", string(ds_list_find_index(Notes.notes_created_at, li.id)), output);*/
-			}
 		
 			ini_close();
 		}
