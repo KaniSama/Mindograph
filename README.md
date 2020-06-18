@@ -2,6 +2,9 @@
 Mindograph is a tool for visually organising ideas.
 Every idea is a note, and every note is a node! Pin virtual notes to the virtual corkboard and link the notes with virtual red strings!
 
+# Disclaimer
+Do not put too much hope in this tool yet. Even though it says "Release", the project is far from being finished. Because of this, you may lose all of the stuff you create with Mindograph. **Work with it at your own risk!**
+
 # Controls
 - Grab and move notes on their headers with LMB. Use MMB to pan around the space and the mouse wheel to zoom.
 - Press Home to reset zoom.
@@ -13,3 +16,4 @@ Every idea is a note, and every note is a node! Pin virtual notes to the virtual
 **(Be careful, you can permanently resize a note into oblivion while still displaying its text! I know, it's weird. Working on it!)**
 - Press Ctrl+S to save the project to the default file or Ctrl+ShiftS to create (or rewrite) a custom file. The location for savefiles is %localappdata%\CorkBoard\. Press Ctrl+O to load a savefile.
 **Remember to save your progress before you quit, the tool doesn't do that itself yet!**
+- Press Ctrl+N to start a new mindmap. **Don't save the new mindmap with Ctrl+S as that WILL rewrite the old minndmap!**
