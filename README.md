@@ -16,4 +16,4 @@ Do not put too much hope in this tool yet. Even though it says "Release", the pr
 **(Be careful, you can permanently resize a note into oblivion while still displaying its text! I know, it's weird. Working on it!)**
 - Press Ctrl+S to save the project to the default file or Ctrl+ShiftS to create (or rewrite) a custom file. The location for savefiles is %appdata%\CorkBoard\. Press Ctrl+O to load a savefile.
 **Remember to save your progress before you quit, the tool doesn't do that itself yet!**
-- Press Ctrl+N to start a new mindmap. **Don't save the new mindmap with Ctrl+S as that WILL rewrite the old minndmap!**
+- Press Ctrl+N to start a new mindmap. **Try not to save the new mindmap with Ctrl+S as that WILL rewrite the old mindmap!**
