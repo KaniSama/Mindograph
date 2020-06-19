@@ -1,6 +1,6 @@
 with (Notes) {
-	savefile = filename;
-	
+	var savefile = filename;
+	ini_close();
 	if (!ds_list_empty(notes)) {
 		var ntemp = ds_list_create();
 		ds_list_copy(ntemp, notes_created_at);
@@ -9,9 +9,7 @@ with (Notes) {
 			file_delete(savefile);
 		}
 			
-			ini_open(savefile);
-		
-			ini_write_real("notes_list_size", "size", ds_list_size(ntemp));
+			ini_open(savefile);			
 		
 			for (var i = 0; i < ds_list_size(ntemp); i++) {
 				var li = ntemp[| i];
@@ -29,22 +27,9 @@ with (Notes) {
 				ds_map_add_list(dsi, "all", li.connections);
 				
 				ini_write_string(i, "connections", base64_encode(json_encode(dsi)));
-				
-				/*
-				dsi[? "x"] = ;
-				dsi[? "y"] = li.y;
-				dsi[? "w"] = li.tw;
-				dsi[? "h"] = li.th;
-				dsi[? "depth"] = li.depth;
-				dsi[? "text"] = li.text;
-				dsi[? "pinned"] = li.pinned;
-				ds_map_add_list(dsi, "connections", li.connections);
+			}
 			
-				output = json_encode(dsi);
-			
-				ini_write_string("notes", string(ds_list_find_index(Notes.notes_created_at, li.id)), output);*/
-		
+			ini_write_real("notes_list_size", "size", ds_list_size(ntemp));
 			ini_close();
-		}
 	}
 }

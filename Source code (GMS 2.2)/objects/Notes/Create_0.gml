@@ -14,4 +14,4 @@ notes = ds_list_create();
 notes_created_at = ds_list_create();
 
 update_list = false;
-filename = "saveBkup";
+filename = "saveBkup.mindmap";

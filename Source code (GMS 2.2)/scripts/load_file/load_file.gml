@@ -1,8 +1,10 @@
 /// @description Loads the custom ini
 /// @param filename The name of the file to load
 
+ini_close();
+
 with (Notes) {
-	var fn = argument[0];
+	var fn = filename;
 	ini_open(fn);
 	
 	for (var i = 0; i < ds_list_size(notes); i++) {
