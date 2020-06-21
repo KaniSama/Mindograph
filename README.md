@@ -18,4 +18,4 @@ Do not put too much hope in this tool yet. Even though it says "Release", the pr
 - Press Ctrl+N to start a new mindmap. **Try not to save the new mindmap with Ctrl+S as that MAY rewrite the old mindmap!**
 
 # Mindograph Roadmap (v1.1-Release)
-![Roadmap](https://github.com/KaniSama/Mindograph/blob/master/Source code (GMS 2.2)/roadmap.png?raw=true)
+![Roadmap](https://github.com/KaniSama/Mindograph/blob/master/SourceCode(GMS2.2)/roadmap.png?raw=true)
