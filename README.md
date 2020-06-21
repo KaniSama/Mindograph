@@ -12,8 +12,7 @@ Do not put too much hope in this tool yet. Even though it says "Release", the pr
 **(Be careful, there's no way to delete notes as of yet!)**
 - Hold L while mouse-hovering over a note to start a link. Release L over another note to create a link.
 - Double-click a note's header to pin it. Double-click the note's text to edit it.
-- Hold S and LMB over a note to resize it.
-**(Be careful, you can permanently resize a note into oblivion while still displaying its text! I know, it's weird. Working on it!)**
+- Hold S and LMB over a note to resize it **or** hold-drag LMB from the bottom-right corner of the note.
 - Press Ctrl+S to save the project to the default file or Ctrl+ShiftS to create (or rewrite) a custom file. The location for savefiles is %appdata%\CorkBoard\. Press Ctrl+O to load a savefile.
 **Remember to save your progress before you quit, the tool doesn't do that itself yet!**
 - Press Ctrl+N to start a new mindmap. **Try not to save the new mindmap with Ctrl+S as that WILL rewrite the old mindmap!**
