@@ -1,5 +1,7 @@
 /// @description drag code n shit
 
+if (!keyboard_check(vk_space)) {
+
 #region dragControl
 if (mouse_check_button_pressed(mb_left) && touched(x, y, w, h) && eligible()) {
 	var i = ds_list_find_index(Notes.notes, id);
@@ -37,21 +39,18 @@ if ((keyboard_check_pressed(ord("L")) || pinned && mouse_check_button_pressed(mb
 #endregion
 
 #region resizeControl
-if (touched(x, y, tw, th) && eligible() && keyboard_check(ord("S")) && !pinned && mouse_check_button(mb_left)) {
+if (!pinned && mouse_check_button_pressed(mb_left) && eligible() && (
+		touched(x, y, tw, th) && keyboard_check(ord("S")) || touched(x + tw - 10, y + th - 10, 10, 10)
+)) {
 	resize = true;
 }
 if (!mouse_check_button(mb_left) && resize) {
 	resize = false;
 }
 if (resize) {
-	tw = mouse_x - x;
-	th = mouse_y - y;
+	tw = clamp(mouse_x - x, 48, 1000);
+	th = clamp(mouse_y - y, 48, 1000);
 }
 #endregion
 
-/*if (touched(x, y, w, header) && eligible()) {
-	window_set_cursor(cr_drag);
-} else {
-	if (window_get_cursor() != cr_default)
-		window_set_cursor(cr_default);
-}*/
+}

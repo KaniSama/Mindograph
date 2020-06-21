@@ -19,16 +19,18 @@ if (keyboard_check(vk_control)) {
 			cleanup();
 	}
 } else {
-	if (keyboard_check_pressed(vk_f5)) {
-		filename = get_string("Enter the name of the file to save:", filename);
-		if (filename != "")
-			save_notes(/*filename*/);
-	}
+	if (mouse_check_button_pressed(mb_left)) {
+		if (keyboard_check_pressed(vk_f5)) {
+			filename = get_string("Enter the name of the file to save:", filename);
+			if (filename != "")
+				save_notes(/*filename*/);
+		}
 	
-	if (keyboard_check_pressed(vk_f9)) {
-		filename = get_string("Enter the file name:", filename);
-		if (filename != "")
-			load_file(/*filename*/);
+		if (keyboard_check_pressed(vk_f9)) {
+			filename = get_string("Enter the file name:", filename);
+			if (filename != "")
+				load_file(/*filename*/);
+		}
 	}
 }
 

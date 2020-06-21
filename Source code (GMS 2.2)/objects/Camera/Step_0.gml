@@ -59,5 +59,32 @@ if (keyboard_check_pressed(vk_home)) {
 /*if (abs(camW - RW) < .1) camW = RW;
 if (abs(camH - RH) < .1) camH = RH;*/
 
-camera_set_view_pos(cam, camX, camY);
 camera_set_view_size(cam, camW, camH);
+camera_set_view_pos(cam, camX, camY);
+
+if (keyboard_check_pressed(ord("F"))) fps_show = !fps_show;
+
+if (keyboard_check(vk_space) && mouse_check_button_pressed(mb_left)) {
+	drx = mouse_x;
+	dry = mouse_y;
+	
+	drag = true;
+}
+if (keyboard_check_pressed(vk_space) && mouse_check_button(mb_left)) {
+	drx = mouse_x;
+	dry = mouse_y;
+	
+	dragspace = true;
+}
+if (keyboard_check_released(vk_space)) {
+	dragspace = false;
+}
+if (drag || dragspace) {
+	var _x = drx - (mouse_x - camera_get_view_x(cam));
+	var _y = dry - (mouse_y - camera_get_view_y(cam));
+
+	camera_set_view_pos(cam, _x, _y);
+}
+if (mouse_check_button_released(mb_left) || mouse_check_button_released(mb_middle)) {
+	drag = false;
+}

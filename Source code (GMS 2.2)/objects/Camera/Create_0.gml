@@ -20,6 +20,10 @@ display_set_gui_size(RW, RH);
 
 drx = 0;
 dry = 0;
+drag = false;
+dragspace = false;
+
+fps_show = false;
 
 /*global.Window_Width = window_get_width();
 global.Window_Height = window_get_height();*/
