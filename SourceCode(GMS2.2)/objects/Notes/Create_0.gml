@@ -9,6 +9,7 @@ key_save_notes_ctrl = virtual_key_add(32, 0, 32, 32, vk_f5);
 
 key_open_file_ctrl = virtual_key_add(64, 0, 32, 32, vk_f9);
 //key_open_file_o = virtual_key_add(64, 0, 32, 32, ord("O"));
+saved = false;
 
 notes = ds_list_create();
 notes_created_at = ds_list_create();

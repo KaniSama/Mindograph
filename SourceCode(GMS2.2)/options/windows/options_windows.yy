@@ -8,7 +8,7 @@
     "option_windows_company_info": "Kani",
     "option_windows_copy_exe_to_dest": false,
     "option_windows_copyright_info": "(c) 2020 Kani",
-    "option_windows_description_info": "A tool for virtual mindmapping!",
+    "option_windows_description_info": "Mindograph - A tool for virtual mindmapping!",
     "option_windows_disable_sandbox": true,
     "option_windows_display_cursor": true,
     "option_windows_display_name": "Mindograph",

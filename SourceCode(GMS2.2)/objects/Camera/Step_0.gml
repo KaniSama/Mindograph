@@ -22,8 +22,8 @@ if ( !is_fullscreen )
 // View zoom
 var wheel = mouse_wheel_down() - mouse_wheel_up();
 
-var camX = camera_get_view_x(cam);
-var camY = camera_get_view_y(cam);
+camX = camera_get_view_x(cam);
+camY = camera_get_view_y(cam);
 
 camW = camera_get_view_width(cam);
 camH = camera_get_view_height(cam);
