@@ -10,7 +10,7 @@ var off = argument[2];
 var cx = Camera.camX;
 var cy = Camera.camY;
 
-var cw = Camera.camW;
-var ch = Camera.camH;
+var cw = cx + Camera.camW;
+var ch = cy + Camera.camH;
 
 return (xx >= cx-off && yy >= cy-off && xx <= cw+off && yy <= ch+off);

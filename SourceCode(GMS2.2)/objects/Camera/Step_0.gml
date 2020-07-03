@@ -88,3 +88,21 @@ if (drag || dragspace) {
 if (mouse_check_button_released(mb_left) || mouse_check_button_released(mb_middle)) {
 	drag = false;
 }
+
+if (mouse_check_button_pressed(mb_right)) {
+	global.u_el = true;
+	
+	with (Note) {
+		if (touched(x, y, w, h)) {
+			global.u_el = false;
+		}
+	}
+	
+	if (global.u_el) {
+		var ddm = instance_create_layer(window_mouse_get_x(), window_mouse_get_y(), "Instances", DDM);
+		
+		ddm.menu[| 0] = ds_map_create();
+		ds_map_add(ddm.menu[| 0], "text", "New note");
+		ds_map_add(ddm.menu[| 0], "func", create_note);
+	}
+}

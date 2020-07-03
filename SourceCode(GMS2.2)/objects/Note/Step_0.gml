@@ -53,4 +53,20 @@ if (resize) {
 }
 #endregion
 
+#region drop-down-menu
+	if (touched(x, y, w, h) && mouse_check_button_pressed(mb_right)) {
+		ddm = instance_create_layer(window_mouse_get_x(), window_mouse_get_y(), "Instances", DDM);
+	
+		ddm.parent = id;
+		
+		ddm.menu[| 0] = ds_map_create();
+		ds_map_add(ddm.menu[| 0], "text", "Delete note");
+		ds_map_add(ddm.menu[| 0], "func", delete_note);
+		
+		ddm.menu[| 1] = ds_map_create();
+		ds_map_add(ddm.menu[| 1], "text", "Detach note");
+		ds_map_add(ddm.menu[| 1], "func", detach_note);
+	}
+#endregion
+
 }
