@@ -3,7 +3,7 @@ Mindograph is a tool for visually organising ideas.
 Every idea is a note, and every note is a node! Pin virtual notes to the virtual corkboard and link the notes with virtual red strings!
 
 # Disclaimer
-Do not put too much hope in this tool yet. Even though it says "Release", the project is far from being finished. Because of this, you may lose all of the stuff you create with Mindograph. **Work with it at your own risk!**
+Even though the version name contains the word "Release", the project is far from being finished. Because of this, you may lose all of the stuff you create with Mindograph. **Work with it at your own risk!**
 
 # Controls
 - Grab and move notes on their headers with LMB. Use MMB or Space+LMB to pan around the space and the mouse wheel to zoom.
