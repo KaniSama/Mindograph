@@ -2,6 +2,8 @@
 Mindograph is a tool for visually organising ideas.
 Every idea is a note, and every note is a node! Pin virtual notes to the virtual corkboard and link the notes with virtual red strings!
 
+Download ![v1.2-Release](https://github.com/KaniSama/Mindograph/raw/master/Mindograph%20Finale.zip)
+
 # Disclaimer
 Even though the version name contains the word "Release", the project is far from being finished. Because of this, you may lose all of the stuff you create with Mindograph. **Work with it at your own risk!**
 
@@ -17,5 +19,5 @@ Even though the version name contains the word "Release", the project is far fro
 **Remember to save your progress before you quit, the tool doesn't do that itself yet!**
 - Press Ctrl+N to start a new mindmap. **Try not to save the new mindmap with Ctrl+S as that MAY rewrite the old mindmap!**
 
-# Mindograph Roadmap (v1.1-Release)
+# Mindograph Roadmap ([v1.2-Release](https://github.com/KaniSama/Mindograph/commit/master))
 ![Roadmap](https://github.com/KaniSama/Mindograph/blob/master/SourceCode(GMS2.2)/roadmap.png?raw=true)
