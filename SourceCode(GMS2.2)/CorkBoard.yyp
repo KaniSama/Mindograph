@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "1bb01352-492e-483d-a06c-dc29fe7164bb",
+            "Value": {
+                "id": "628a6abe-18a6-4b7a-a5b7-1d6574e8c8fd",
+                "resourcePath": "fonts\\_7_12\\_7_12.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "1e9e8b5d-8e05-4633-a02d-5e8bab92961b",
             "Value": {
                 "id": "225b93d8-3c36-4d41-8763-cf656b9ba477",
@@ -365,6 +373,14 @@
                 "resourcePath": "views\\fb0dd1d5-a1c4-4fd9-bca0-7b4a500b786c.yy",
                 "resourceType": "GMFolder"
             }
+        },
+        {
+            "Key": "febd8152-1950-47a3-8fd0-b072a92d5c32",
+            "Value": {
+                "id": "67efe45f-925b-4ebf-872b-0ec2e65c3510",
+                "resourcePath": "scripts\\pin_unpin\\pin_unpin.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
@@ -380,7 +396,8 @@
         "3f1fd440-78bc-4b15-940d-35d8bf89a15e",
         "3d2bd9d6-b957-4979-84c5-f2482d929ebb",
         "8a265917-0582-4eef-b268-4e334acec922",
-        "a6629d53-8c7c-427f-a791-7ff04421960b"
+        "a6629d53-8c7c-427f-a791-7ff04421960b",
+        "febd8152-1950-47a3-8fd0-b072a92d5c32"
     ],
     "tutorial": ""
 }

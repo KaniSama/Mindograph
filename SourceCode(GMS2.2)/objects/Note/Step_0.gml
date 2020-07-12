@@ -59,13 +59,20 @@ if (resize) {
 	
 		ddm.parent = id;
 		
-		ddm.menu[| 0] = ds_map_create();
-		ds_map_add(ddm.menu[| 0], "text", "Delete note");
-		ds_map_add(ddm.menu[| 0], "func", delete_note);
+		var k = 0;
+		ddm.menu[| k] = ds_map_create();
+		ds_map_add(ddm.menu[| k], "text", pinned?"Remove pin":"Pin");
+		ds_map_add(ddm.menu[| k], "func", pin_unpin);
 		
-		ddm.menu[| 1] = ds_map_create();
-		ds_map_add(ddm.menu[| 1], "text", "Detach note");
-		ds_map_add(ddm.menu[| 1], "func", detach_note);
+		k++;
+		ddm.menu[| k] = ds_map_create();
+		ds_map_add(ddm.menu[| k], "text", "Unlink note");
+		ds_map_add(ddm.menu[| k], "func", detach_note);
+		
+		k++;
+		ddm.menu[| k] = ds_map_create();
+		ds_map_add(ddm.menu[| k], "text", "Delete note");
+		ds_map_add(ddm.menu[| k], "func", delete_note);
 	}
 #endregion
 
