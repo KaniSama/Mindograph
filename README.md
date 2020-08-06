@@ -2,8 +2,9 @@
 Mindograph is a tool for visually organising ideas.
 Every idea is a note, and every note is a node! Pin virtual notes to the virtual corkboard and link the notes with virtual red strings!
 
-Download [latest version](https://github.com/KaniSama/Mindograph/raw/master/Mindograph%20Finale.zip).
-Download [unstable beta version](https://github.com/KaniSama/Mindograph/raw/beta-features/Mindograph%20Finale.zip).
+Download:
+- [latest version](https://github.com/KaniSama/Mindograph/raw/master/Mindograph%20Finale.zip).
+- [Unstable beta version](https://github.com/KaniSama/Mindograph/raw/beta-features/Mindograph%20Finale.zip).
 
 # Disclaimer
 Even though the version name contains the word "Release", the project is far from being finished. Because of this, you may lose all of the stuff you create with Mindograph. **Work with it at your own risk!**
