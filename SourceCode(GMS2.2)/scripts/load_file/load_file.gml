@@ -2,6 +2,7 @@
 /// @param filename The name of the file to load
 
 ini_close();
+cleanup();
 
 with (Notes) {
 	var fn = filename;

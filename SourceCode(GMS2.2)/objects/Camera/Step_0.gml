@@ -101,8 +101,14 @@ if (mouse_check_button_pressed(mb_right)) {
 	if (global.u_el) {
 		var ddm = instance_create_layer(window_mouse_get_x(), window_mouse_get_y(), "Instances", DDM);
 		
-		ddm.menu[| 0] = ds_map_create();
-		ds_map_add(ddm.menu[| 0], "text", "New note");
-		ds_map_add(ddm.menu[| 0], "func", create_note);
+		var k = 0;
+		ddm.menu[| k] = ds_map_create();
+		ds_map_add(ddm.menu[| k], "text", "New note");
+		ds_map_add(ddm.menu[| k], "func", create_note);
+		
+		k++;
+		ddm.menu[| k] = ds_map_create();
+		ds_map_add(ddm.menu[| k], "text", "New whiteboard");
+		ds_map_add(ddm.menu[| k], "func", create_wb);
 	}
 }

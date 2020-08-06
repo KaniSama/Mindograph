@@ -19,6 +19,7 @@ if (update_list) {
 		ni.th = ini_read_real(string(i), "h", 0);//map[? "h"];
 		
 		ni.text = ini_read_string(string(i), "text", "No text");//map[? "text"];
+		ni.displaytext = string_replace_all(ni.text, "<br>", "\n");
 		
 		var map = json_decode(base64_decode(ini_read_string(string(i), "connections", 0)));
 		ni.connections = map[? "all"]

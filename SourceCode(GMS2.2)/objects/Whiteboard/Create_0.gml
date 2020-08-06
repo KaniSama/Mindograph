@@ -1,8 +1,8 @@
 /// @description init
 
-type = "note";
+type = "wb";
 
-tw = 240; // Target width of the note
+tw = 500; // Target width of the note
 th = 240; // Target height of the note
 
 w = 0; // Display width of the note
@@ -16,8 +16,18 @@ pinned = false; // Determines if the note is pinned from being dragged or resize
 xOffset = 0; // X and Y offsets for dragging
 yOffset = 0;
 
-text = "Double-click to edit text";
-displaytext = text;
+text = "";
 
 connections = ds_list_create(); // List of all the note's connections. Has a bunch of issues!
 tempConnection = -1; // Object placeholder variable for the currently establishing connection
+
+img = surface_create(tw, th-header*2);
+
+surface_set_target(img);
+	//draw_rectangle_color(x, y+header, x+tw, y+th, c_white, c_white, c_white, c_white, false);
+	draw_clear_alpha(c_white, 0);
+surface_reset_target();
+
+mouse_xprevious = mouse_x;
+mouse_yprevious = mouse_y;
+buf = buffer_create(16328, buffer_grow, 1);
