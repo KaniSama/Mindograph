@@ -25,5 +25,5 @@ dragspace = false;
 
 fps_show = false;
 
-/*global.Window_Width = window_get_width();
-global.Window_Height = window_get_height();*/
+global.Window_Width = window_get_width();
+global.Window_Height = window_get_height();

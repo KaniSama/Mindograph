@@ -1,24 +1,5 @@
 /// @description Window resize code (TODO)
 
-/*var is_fullscreen = window_get_fullscreen();
-
-if ( !is_fullscreen )
-{
-    if ( window_get_width() != global.Window_Width ||
-         window_get_height() != global.Window_Height )
-    {
-        //show_debug_message("window manually resized")
-   
-        view_wport[0] = window_get_width();
-        view_hport[0] = window_get_height();
-   
-        surface_resize(application_surface, view_wport[0], view_hport[0]);
-   
-        global.Window_Width = window_get_width();
-        global.Window_Height = window_get_height();
-    }
-}*/
-
 // View zoom
 var wheel = mouse_wheel_down() - mouse_wheel_up();
 
@@ -27,6 +8,11 @@ camY = camera_get_view_y(cam);
 
 camW = camera_get_view_width(cam);
 camH = camera_get_view_height(cam);
+
+win_wid=window_get_width();
+win_hgt=window_get_height();
+aspect=win_wid/win_hgt;
+scale = 1;
 
 if (wheel != 0) {
 	wheel *= .1;
@@ -43,21 +29,45 @@ if (wheel != 0) {
 	camY -= addH *.5;
 }
 
-/*camW = clamp(camW, 640, 4500);
-camH = clamp(camH, 320, 2600);*/
+// window resize code
+if ( window_get_width() != global.Window_Width ||
+    window_get_height() != global.Window_Height )
+{
+	if win_wid/win_hgt>=aspect {
+	    //wider
+	    scale=win_wid/RW;
+	} else {
+	    //taller
+	    scale=win_hgt/RH;
+	}
+	view_hport[0]=win_hgt;
+	view_wport[0]=win_wid;
+	camW = win_wid/scale;
+	camH = win_hgt/scale;
+	display_set_gui_size(window_get_width(), window_get_height());
+	/*
+	show_debug_message("window manually resized")
+
+	view_set_hport(view_current, window_get_height());
+	view_set_wport(view_current, window_get_width());*/
+   
+	surface_resize(application_surface, view_wport[0], view_hport[0]);
+	/*camW = view_wport[0];
+	camH = view_hport[0];
+   */
+	global.Window_Width = window_get_width();
+	global.Window_Height = window_get_height();
+}
 
 if (keyboard_check_pressed(vk_home)) {
 	if (camH != RH || camW != RW) {
-		camH = RH;
-		camW = RW;
+		camW = win_wid/scale;
+		camH = win_hgt/scale;
 	
 		camX = mouse_x - camW *.5;
 		camY = mouse_y - camH *.5;
 	}
 }
-
-/*if (abs(camW - RW) < .1) camW = RW;
-if (abs(camH - RH) < .1) camH = RH;*/
 
 camera_set_view_size(cam, camW, camH);
 camera_set_view_pos(cam, camX, camY);
@@ -113,3 +123,4 @@ if (mouse_check_button_pressed(mb_right)) {
 		ds_map_add(ddm.menu[| k], "func", create_wb);*/
 	}
 }
+
