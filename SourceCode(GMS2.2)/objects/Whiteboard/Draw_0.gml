@@ -9,21 +9,16 @@ if (in_camera(x, y, (tw+th)*.5)) {
 
 	draw_set_alpha(1);
 
-	draw_set_color(make_color_rgb(250, 240, 190));
+	draw_set_color(c_white);
 	draw_rectangle(x, y, x+w, y+h, false);
 
-	/*draw_set_color(make_color_rgb(250, 250, 200));
-	draw_rectangle(x, y, x+w, y+header, false);*/
-
-	if (instance_exists(tempConnection) && tempConnection!=-1) {
+	if (instance_exists(tempConnection) && tempConnection!=-1  && !touched(x, y+header, tw, th-header)) {
 		draw_set_color(c_red);
 		draw_line_width(x+w*.5, y+header*.5, tempConnection.x, tempConnection.y, 2);
 	}
 
 
 	if (pinned) {
-		//draw_set_color(c_red);
-		//draw_circle(x+w*.5, y+header*.5, 9, false);
 		draw_sprite_ext(sPin, 0, x+w*.5,y+header*.5, .5, 2, 90, c_black, .5);
 		draw_sprite(sPin, 0, x+w*.5,y+header*.5);
 	} else {
@@ -40,6 +35,20 @@ if (in_camera(x, y, (tw+th)*.5)) {
 		draw_set_alpha(1);
 	}
 
-	draw_set_color(c_dkgray);
-	draw_text_ext(x+8, y+8+header, displaytext, font_get_size(Font) * 1.5, w-16);
+	if (mouse_check_button(mb_left) && touched(x, y+header, tw, th) && eligible()) {
+		if (surface_exists(img)) {
+			draw_set_color(Notes.color);
+			surface_set_target(img);
+				
+				draw_line_width(mouse_x-x, mouse_y-y-header, mouse_xprevious-x, mouse_yprevious-y-header, 3);
+				
+			surface_reset_target();
+		}
+	}
+	mouse_xprevious = mouse_x;
+	mouse_yprevious = mouse_y;
+
+	draw_set_color(c_white);
+	if (surface_exists(img)) draw_surface(img, x, y+header);
+	//draw_text_ext(x+8, y+8+header, text, font_get_size(Font) * 1.5, w-16);
 }
