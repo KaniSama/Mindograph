@@ -2,8 +2,7 @@
 
 if (keyboard_check(vk_control)) {
 	if (keyboard_check_pressed(ord("S"))) {
-		if (keyboard_check(vk_shift))
-			filename = get_save_filename(".mindmap file|*.mindmap", filename);
+		filename = get_save_filename(".mindmap file|*.mindmap", filename);
 			//filename = get_string("Enter the name of the file to save:", filename);
 		if (filename != "") {
 			save_notes(/*filename*/);
