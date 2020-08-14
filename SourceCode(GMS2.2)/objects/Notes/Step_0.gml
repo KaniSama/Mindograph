@@ -3,7 +3,8 @@
 if (keyboard_check(vk_control)) {
 	if (keyboard_check_pressed(ord("S"))) {
 		if (keyboard_check(vk_shift))
-			filename = get_string("Enter the name of the file to save:", filename);
+			filename = get_save_filename(".mindmap file|*.mindmap", filename);
+			//filename = get_string("Enter the name of the file to save:", filename);
 		if (filename != "") {
 			save_notes(/*filename*/);
 			//saved = true;
@@ -11,7 +12,9 @@ if (keyboard_check(vk_control)) {
 	}
 	
 	if (keyboard_check_pressed(ord("O"))) {
-		filename = get_string("Enter the file name:", filename);
+		filename = get_open_filename(".mindmap file|*.mindmap", filename);
+		//if (!directory_exists(filename)) show_message(filename);
+		//filename = get_string("Enter the file name:", filename);
 		if (filename != "") {
 			load_file(/*filename*/);
 			
@@ -28,13 +31,15 @@ if (keyboard_check(vk_control)) {
 } else {
 	if (mouse_check_button_pressed(mb_left)) {
 		if (keyboard_check_pressed(vk_f5)) {
-			filename = get_string("Enter the name of the file to save:", filename);
+			filename = get_save_filename(".mindmap file|*.mindmap", filename);
+			//filename = get_string("Enter the name of the file to save:", filename);
 			if (filename != "")
 				save_notes(/*filename*/);
 		}
 	
 		if (keyboard_check_pressed(vk_f9)) {
-			filename = get_string("Enter the file name:", filename);
+			filename = get_open_filename(".mindmap file|*.mindmap", filename);
+			//filename = get_string("Enter the file name:", filename);
 			if (filename != "") {
 				load_file(/*filename*/);
 				window_set_caption("Mindograph – " + filename/* + saved?"":"*"*/);

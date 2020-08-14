@@ -1,10 +1,11 @@
 /// @description Loads the custom ini
 /// @param filename The name of the file to load
 
-ini_close();
 cleanup();
 
 with (Notes) {
+	ini_close();
+	
 	var fn = filename;
 	if (file_exists(fn)) {
 		ini_open(fn);

@@ -106,9 +106,10 @@ if (mouse_check_button_pressed(mb_right)) {
 		ds_map_add(ddm.menu[| k], "text", "New note");
 		ds_map_add(ddm.menu[| k], "func", create_note);
 		
+		/*
 		k++;
 		ddm.menu[| k] = ds_map_create();
 		ds_map_add(ddm.menu[| k], "text", "New whiteboard");
-		ds_map_add(ddm.menu[| k], "func", create_wb);
+		ds_map_add(ddm.menu[| k], "func", create_wb);*/
 	}
 }
